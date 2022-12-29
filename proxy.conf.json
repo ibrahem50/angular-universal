@@ -1,0 +1,49 @@
+{
+  "/local/*": {
+    "target": "https://pre-dev.k8s-cluster-poc-475abba301f29ce035eb2a3d8e891717-0000.eu-de.containers.appdomain.cloud",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "info",
+    "timeout": 600000,
+    "pathRewrite": {
+      "^/local": ""
+    }
+  },
+  "/unitServer/*": {
+    "target": "http://f88a62f0-eu-de.lb.appdomain.cloud/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info",
+    "timeout": 600000,
+    "pathRewrite": {
+      "^/unitServer": ""
+    }
+  },
+  "/cms": {
+    "target": "http://localhost:1337/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info",
+    "pathRewrite": {
+      "^/cms": ""
+    }
+  },
+  "/ip": {
+    "target": "https://jsonip.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info",
+    "pathRewrite": {
+      "^/ip": ""
+    }
+  },
+  "/chatbot": {
+    "target": "http://ea6bcfdb-eu-de.lb.appdomain.cloud/api/v1/resources/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info",
+    "pathRewrite": {
+      "^/chatbot": ""
+    }
+  }
+}
